@@ -38,19 +38,22 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="" />
+            android:text=""
+            android:id="@+id/name"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Location"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+           />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="" />
+            android:text=""
+            android:id="@+id/locaiton"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,19 +65,21 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="" />
+            android:text=""
+            android:id="@+id/contactnumber"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Milk Quality"
+            android:text="Milk Category"
             android:textSize="20dp"
             android:textStyle="bold" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="" />
+            android:text=""
+            android:id="@+id/milkcategory"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -86,7 +91,8 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="" />
+            android:text=""
+            android:id="@+id/milkquantitiy"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -98,7 +104,8 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="" />
+            android:text=""
+            android:id="@+id/milkprice"/>
 
         <Button
             android:layout_width="150dp"

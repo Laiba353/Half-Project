@@ -2,6 +2,7 @@ package com.example.fyp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -99,11 +102,16 @@ public class MilkMansList extends AppCompatActivity {
             linearLayout1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(MilkMansList.this, u.getName(), Toast.LENGTH_SHORT).show();
+                   String name;
+                   name=u.getName();
+                   /* Intent intent = new Intent(MilkMansList.this, MilkManDetails.class);
+                    intent.putExtra("message", name);
+                    startActivity(intent);*/
+                    Toast.makeText(MilkMansList.this, "You Selected "+name+" Milk Man", Toast.LENGTH_SHORT).show();
+
 
                 }
             });
-            //okey
 
 
 
