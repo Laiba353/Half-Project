@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -46,8 +48,38 @@ public class AddMilkInfo extends AppCompatActivity {
             user.setQuantity(quantity);
             user.setPrice(price);
             user.setQuality(category);
-            myDbHandler.insertmilkman(user);
+            myDbHandler.updatemilkinfo(user);
 
         }
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+
+
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.SearchOrders:
+                Toast.makeText(getApplicationContext(), "Item 1 Selected", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.OtherMilkMans:
+                startActivity(new Intent(AddMilkInfo.this,MilkMansList.class));
+                finish();
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+
+        }
+
+
+
+
+
     }
 }
